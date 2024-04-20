@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertComponent } from './product-alert/product-alert.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { PopoComponent } from './popo/popo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { PopoComponent } from './popo/popo.component';
     RouterModule.forRoot([
       //{ path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent}
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
