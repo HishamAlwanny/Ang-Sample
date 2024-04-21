@@ -10,13 +10,15 @@ import { ProductAlertComponent } from './product-alert/product-alert.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { PopoComponent } from './popo/popo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    MatSlideToggleModule,
     RouterModule.forRoot([
-      //{ path: '', component: ProductListComponent },
+      { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent}
     ]),
     BrowserAnimationsModule
