@@ -10,7 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
-    "generateData": "node ./server/generate.js > ./server/database.json",
+    "generateData": "node ./server/generateData.js > ./server/database.json",
     "runServer": "json-server --watch ./server/database.json"
   },
   "private": true,
