@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports: [
@@ -24,9 +25,11 @@ import { MatCardModule } from '@angular/material/card';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent},
-      { path: 'popo', component: PopoComponent}
+      { path: 'popo', component: PopoComponent},
+      { path: 'crud', component: PopoComponent}
     ]),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
