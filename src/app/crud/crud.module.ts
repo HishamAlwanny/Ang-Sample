@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { CrudRoutingModule } from './crud-routing.module';
@@ -20,7 +19,6 @@ import { UpdateComponent } from './update/update.component';
   imports: [
     CommonModule,
     CrudRoutingModule,
-    HttpClientModule,
     FormsModule
   ]
 //   ,

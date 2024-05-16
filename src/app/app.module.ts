@@ -14,6 +14,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { AppRoutingModule } from './app-routing.module';
       { path: 'crud', component: PopoComponent}
     ]),
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   declarations: [
