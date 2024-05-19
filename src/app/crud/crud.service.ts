@@ -27,7 +27,7 @@ export class CrudService {
     }
     
     getById(id: any): Observable<Product>{
-        return this.httpClient.get<Product>(this.apiServer + '/products/' + id )
+        return this.httpClient.get<Product>(this.apiServer + '/products?id=' + id )
             .pipe(
                 catchError(this.errorHandler)
             )
@@ -41,7 +41,7 @@ export class CrudService {
     }
 
     update(id: any, product: any): Observable<Product>{
-        return this.httpClient.put<Product>(this.apiServer + '/products/' + id, JSON.stringify(product), this.httpOptions )
+        return this.httpClient.put<Product>(this.apiServer + '/products?id=' + id, JSON.stringify(product), this.httpOptions )
             .pipe(
                 catchError(this.errorHandler)
             )
