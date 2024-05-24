@@ -21,7 +21,7 @@
 				<td>{{product.quantity}}</td>
 				<td>
 					<button type="button" [routerLink]="['/crud/update/', product.id]">Update</button>
-					<button type="button" (click)="Delete(product.id)">Remove</button>
+					<button type="button" (click)="delete(product.id)">Remove</button>
 				</td>
 			</tr>
 		</tbody>
