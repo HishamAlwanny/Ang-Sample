@@ -21,4 +21,11 @@ export class HomeComponent implements OnInit{
         })
     }
 
+    Delete(id: number) {
+        this.crudService.delete(id)
+            .subscribe(res => {
+                console.log('Product delete!');
+            })
+    }
+
 }
