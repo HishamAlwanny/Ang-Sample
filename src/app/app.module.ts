@@ -15,9 +15,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { TabloComponent } from './tablo/tablo.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   imports: [
+    MatTableModule,
     MatGridListModule,
     MatCardModule,
     BrowserModule,
@@ -27,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent},
       { path: 'popo', component: PopoComponent},
-      { path: 'crud', component: PopoComponent}
+      { path: 'crud', component: PopoComponent},
+      { path: 'tablo', component: TabloComponent}
     ]),
     BrowserAnimationsModule,
     HttpClientModule,
@@ -39,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductListComponent,
     ProductAlertComponent,
     ProductDetailsComponent,
-    PopoComponent
+    PopoComponent,
+    TabloComponent
   ],
   bootstrap: [
     AppComponent
