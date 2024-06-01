@@ -1,0 +1,15 @@
+/* Add your custom styles here */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  thead {
+    background-color: #f4f4f4;
+  }

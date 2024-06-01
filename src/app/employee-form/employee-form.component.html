@@ -1,0 +1,35 @@
+<p>employee-form works!</p>
+<form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="periodDate">Period Date:</label>
+      <input id="periodDate" formControlName="periodDate" type="date">
+    </div>
+  
+    <div formArrayName="employees">
+      <table>
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Is Included</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees.controls; let i = index" [formGroupName]="i">
+            <td>
+              <input formControlName="fullName" type="text">
+            </td>
+            <td>
+              <input formControlName="isIncluded" type="checkbox">
+            </td>
+            <td>
+              <button type="button" (click)="removeEmployee(i)">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" (click)="addEmployee()">Add Employee</button>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>

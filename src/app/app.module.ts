@@ -21,6 +21,7 @@ import { Tablo2Component } from './tablo2/tablo2.component';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
       { path: 'crud', component: PopoComponent},
       { path: 'tablo', component: TabloComponent},
       { path: 'tablo2', component: Tablo2Component},
+      { path: 'tablo3', component: EmployeeFormComponent},
     ]),
     BrowserAnimationsModule,
     HttpClientModule,
@@ -53,7 +55,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     ProductDetailsComponent,
     PopoComponent,
     TabloComponent,
-    Tablo2Component
+    Tablo2Component,
+    EmployeeFormComponent,
   ],
   bootstrap: [
     AppComponent
