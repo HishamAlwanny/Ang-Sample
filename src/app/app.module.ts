@@ -17,6 +17,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TabloComponent } from './tablo/tablo.component';
 import {MatTableModule} from '@angular/material/table';
+import { Tablo2Component } from './tablo2/tablo2.component';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   imports: [
@@ -31,11 +35,15 @@ import {MatTableModule} from '@angular/material/table';
       { path: 'products/:productId', component: ProductDetailsComponent},
       { path: 'popo', component: PopoComponent},
       { path: 'crud', component: PopoComponent},
-      { path: 'tablo', component: TabloComponent}
+      { path: 'tablo', component: TabloComponent},
+      { path: 'tablo2', component: Tablo2Component},
     ]),
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatDatepickerModule
   ],
   declarations: [
     AppComponent,
@@ -44,7 +52,8 @@ import {MatTableModule} from '@angular/material/table';
     ProductAlertComponent,
     ProductDetailsComponent,
     PopoComponent,
-    TabloComponent
+    TabloComponent,
+    Tablo2Component
   ],
   bootstrap: [
     AppComponent
