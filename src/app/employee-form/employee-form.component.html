@@ -10,7 +10,7 @@
     </div>
   
     <div formArrayName="employees">
-      <table mat-table [dataSource]="employees.controls" class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <ng-container matColumnDef="fullName">
           <th mat-header-cell *matHeaderCellDef> Full Name </th>
           <td mat-cell *matCellDef="let employee; let i = index" [formGroupName]="i">
