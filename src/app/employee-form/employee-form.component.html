@@ -1,35 +1,45 @@
 <p>employee-form works!</p>
 <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
     <div>
-      <label for="periodDate">Period Date:</label>
-      <input id="periodDate" formControlName="periodDate" type="date">
+      <mat-form-field appearance="fill">
+        <mat-label>Period Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="periodDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
     </div>
   
     <div formArrayName="employees">
-      <table>
-        <thead>
-          <tr>
-            <th>Full Name</th>
-            <th>Is Included</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let employee of employees.controls; let i = index" [formGroupName]="i">
-            <td>
-              <input formControlName="fullName" type="text">
-            </td>
-            <td>
-              <input formControlName="isIncluded" type="checkbox">
-            </td>
-            <td>
-              <button type="button" (click)="removeEmployee(i)">Remove</button>
-            </td>
-          </tr>
-        </tbody>
+      <table mat-table [dataSource]="employees.controls" class="mat-elevation-z8">
+        <ng-container matColumnDef="fullName">
+          <th mat-header-cell *matHeaderCellDef> Full Name </th>
+          <td mat-cell *matCellDef="let employee; let i = index" [formGroupName]="i">
+            <mat-form-field appearance="fill">
+              <mat-label>Full Name</mat-label>
+              <input matInput formControlName="fullName">
+            </mat-form-field>
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="isIncluded">
+          <th mat-header-cell *matHeaderCellDef> Is Included </th>
+          <td mat-cell *matCellDef="let employee; let i = index" [formGroupName]="i">
+            <mat-checkbox formControlName="isIncluded"></mat-checkbox>
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let employee; let i = index" [formGroupName]="i">
+            <button mat-raised-button color="warn" type="button" (click)="removeEmployee(i)">Remove</button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
-      <button type="button" (click)="addEmployee()">Add Employee</button>
+      <button mat-raised-button color="primary" type="button" (click)="addEmployee()">Add Employee</button>
     </div>
   
-    <button type="submit">Submit</button>
+    <button mat-raised-button color="accent" type="submit">Submit</button>
   </form>

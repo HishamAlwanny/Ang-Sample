@@ -23,6 +23,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+import { MatButtonModule } from '@angular/material/button';
+
+import { MatNativeDateModule } from '@angular/material/core';
+
+
+
+
 @NgModule({
   imports: [
     MatTableModule,
@@ -45,7 +55,11 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
     AppRoutingModule,
     FormsModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule
   ],
   declarations: [
     AppComponent,
