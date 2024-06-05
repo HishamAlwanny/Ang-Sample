@@ -29,6 +29,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 
 import { MatNativeDateModule } from '@angular/material/core';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
 
 
 
@@ -71,6 +72,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     TabloComponent,
     Tablo2Component,
     EmployeeFormComponent,
+    NgTemplateComponent,
   ],
   bootstrap: [
     AppComponent
