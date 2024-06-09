@@ -31,7 +31,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { GridListDynamicComponent } from './grid-list-dynamic/grid-list-dynamic.component';
-
+import { PayCheckTableComponent } from './pay-check-table/pay-check-table.component';
 
 
 
@@ -52,6 +52,7 @@ import { GridListDynamicComponent } from './grid-list-dynamic/grid-list-dynamic.
       { path: 'tablo2', component: Tablo2Component},
       { path: 'tablo3', component: EmployeeFormComponent},
       { path: 'grid', component: GridListDynamicComponent},
+      { path: 'grid2', component: PayCheckTableComponent},
     ]),
     BrowserAnimationsModule,
     HttpClientModule,
@@ -76,6 +77,7 @@ import { GridListDynamicComponent } from './grid-list-dynamic/grid-list-dynamic.
     EmployeeFormComponent,
     NgTemplateComponent,
     GridListDynamicComponent,
+    PayCheckTableComponent,
   ],
   bootstrap: [
     AppComponent

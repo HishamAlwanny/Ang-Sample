@@ -1,0 +1,75 @@
+<p>pay-check-table works!</p>
+<div class="container">
+    <div class="header">
+        <div>
+            <strong>{{ companyName }}</strong><br>
+            {{ companyAddress.line1 }}<br>
+            {{ companyAddress.line2 }}
+        </div>
+        <div>
+            <strong>Earnings Statement</strong><br>
+            Stub Number: {{ stubNumber }}
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>Employee Info</th>
+            <th>SSN</th>
+            <th>Pay Schedule</th>
+            <th>Pay Period</th>
+            <th>Pay Date</th>
+        </tr>
+        <tr>
+            <td>
+                {{ employee.name }}<br>
+                Employee Id: {{ employee.id }}<br>
+                {{ employee.address.line1 }}<br>
+                {{ employee.address.line2 }}
+            </td>
+            <td>{{ employee.ssn }}</td>
+            <td>{{ paySchedule }}</td>
+            <td>{{ payPeriod.start }} to {{ payPeriod.end }}</td>
+            <td>{{ payDate }}</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Earnings</th>
+            <th>Rate</th>
+            <th>Units</th>
+            <th>Total</th>
+            <th>YTD</th>
+        </tr>
+        <tr *ngFor="let earning of earnings">
+            <td>{{ earning.description }}</td>
+            <td>{{ earning.rate }}</td>
+            <td>{{ earning.units }}</td>
+            <td>{{ earning.total }}</td>
+            <td>{{ earning.ytd }}</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Taxes / Deductions</th>
+            <th>Current</th>
+            <th>YTD</th>
+        </tr>
+        <tr *ngFor="let deduction of deductions">
+            <td>{{ deduction.description }}</td>
+            <td>{{ deduction.current }}</td>
+            <td>{{ deduction.ytd }}</td>
+        </tr>
+    </table>
+    <div class="footer">
+        <div>
+            <strong>YTD Gross:</strong> {{ ytdGross }}<br>
+            <strong>YTD Taxes / Deductions:</strong> {{ ytdDeductions }}<br>
+            <strong>YTD Net Pay:</strong> {{ ytdNetPay }}
+        </div>
+        <div>
+            <strong>Gross:</strong> {{ gross }}<br>
+            <strong>Taxes / Deductions:</strong> {{ currentDeductions }}<br>
+            <strong>Net Pay:</strong> {{ netPay }}
+        </div>
+    </div>
+</div>
